@@ -4,6 +4,10 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
+import Card from '../components/card';
+import EventCard from '../components/EventCard';
+
+
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,19 +18,62 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div>
       {children()}
+    </div>
+    <div>
+      <Header />
+      <div className="Hero">
+          <div className="HeroGroup">
+            <h1>Join a community of designers all over the world</h1>
+            <p>Whether it’s in one of our vibrant online communities or at a Sketch meetup in your area, you can join a global network of designers to share knowledge, ask questions and make new friends. Attend a local meetup to improve your skills, discover the latest plugins, or just get inspired and meet designers like you.</p>
+            <a href="https://www.youtube.com/watch?v=4FnN4vseiXQ">Find events near you</a>
+          </div>
+      </div>
+    </div>
+    <div className="Cards">
+      <h2>Upcoming events</h2>
+      <div className="CardGroup">
+      <Card 
+          title="First Sketch Meetup"
+          location="New York, NY"
+          image={require('../images/wallpaper.jpg')}
+        />
+        <Card 
+          title="First Sketch Meetup"
+          location="Philadelphia, PA"
+          image={require('../images/wallpaper.jpg')}
+        />
+        <Card 
+          title="First Sketch Meetup"
+          location="Paris, France"
+          image={require('../images/wallpaper.jpg')}
+        />
+        <Card 
+          title="First Sketch Meetup"
+          location="Berlin, Germany"
+          image={require('../images/wallpaper.jpg')}
+        />
+      </div>
+    </div>
+    <div className="EventCards">
+      <h2>Events</h2>
+      <div className="EventCardsGroup">
+        <EventCard   
+          title="June Magento Phoenix Area Meetup"
+          date="Sat, June 23, 8:30pm • Phoenix Area - Magento Meetup"
+          image={require('../images/event-photo2.jpg')}
+        />
+        <EventCard   
+          title="June Magento Phoenix Area Meetup"
+          date="Sat, June 23, 8:30pm • Phoenix Area - Magento Meetup"
+          image={require('../images/event-photo1.jpg')}
+        />
+      </div>
     </div>
   </div>
 )
+
 
 Layout.propTypes = {
   children: PropTypes.func,

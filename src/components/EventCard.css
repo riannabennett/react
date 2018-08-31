@@ -1,0 +1,33 @@
+.EventCard {
+    width: 600px;
+    height: auto;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template: 
+        'content content image';
+    grid-template-areas: "content image";
+    grid-gap: 20px;
+    margin-bottom: 1em;
+    padding: 20px;
+}
+.EventCard .img {
+    grid-area: image;
+    padding-left:20px; 
+}
+
+.EventCard .text {
+    grid-area: content;
+}
+
+.EventCard H3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0;
+    padding-bottom: 8px;
+}
+.EventCard p {
+    font-size: 14;
+    margin: 0;
+}
