@@ -32,26 +32,26 @@ const Layout = ({ children, data }) => (
       </div>
     </div>
     <div className="Cards">
-      <h2>Upcoming events</h2>
+      <h2>Groups near you</h2>
       <div className="CardGroup">
       <Card 
-          title="First Sketch Meetup"
+          title="Design and Prototype NYC Meetup"
           location="New York, NY"
           image={require('../images/wallpaper.jpg')}
         />
         <Card 
-          title="First Sketch Meetup"
+          title="Philadelphia Sketch Meetup"
           location="Philadelphia, PA"
           image={require('../images/wallpaper.jpg')}
         />
         <Card 
-          title="First Sketch Meetup"
+          title="Product Design and Animation"
           location="Paris, France"
           image={require('../images/wallpaper.jpg')}
         />
         <Card 
-          title="First Sketch Meetup"
-          location="Berlin, Germany"
+          title="Product Design and Animation"
+          location="Paris, France"
           image={require('../images/wallpaper.jpg')}
         />
       </div>
